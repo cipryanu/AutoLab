@@ -1,25 +1,70 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "roboto", sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: cadetblue;
-    padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: cadetblue;
+  padding: 20px 50px;
 }
 
-.logo a, .menu {
-    display: flex;
-    gap: 10px;
+.logo a {
+  display: flex;
+  gap: 10px;
+  font-size: 30px;
+  font-decoration: none;
+  font-weight: bold;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 2.5rem;
+  color: cadetblue;
 }
