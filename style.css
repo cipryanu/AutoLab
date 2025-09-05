@@ -42,7 +42,6 @@ nav a {
 }
 
 /* Hover underline effect */
-
 .menu a::after {
   content: "";
   position: absolute;
@@ -61,6 +60,7 @@ nav a {
 .menu a:hover::after {
   width: 100%;
 }
+/* End of hover underline effect */
 
 /*
 .menu {
@@ -107,11 +107,12 @@ h1 {
   text-align: center;
   margin: 50px 0;
   font-size: 2.5rem;
-  color: cadetblue;
+  color: white;
 }
 
+/* hero section */
 .hero {
-  background: url("hero-image.jpg") no-repeat center center/cover;
+  background: url("/images/car-service.jpg") no-repeat center center/cover;
   height: 300px;
   display: flex;
   justify-content: center;
@@ -124,21 +125,11 @@ h1 {
 }
 /* End of hero section */
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: cadetblue;
-  color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-/* End of footer section */
-
+/* Footer section */
 .footer {
   text-align: center;
   padding: 10px;
-  background-color: #f1f1f1;
+  background-color: cadetblue;
   color: #333;
   margin-top: 20px;
   width: 100%;
@@ -147,9 +138,9 @@ footer {
 .footer p {
   margin: 0;
   font-size: 0.9rem;
+  color: white;
   width: 100%;
 }
-
 /* End of footer section */
 
 .content {
@@ -161,6 +152,7 @@ footer {
   color: #333;
 }
 
+/* Card Design */
 .card {
   background: #f9f9f9;
   border: 1px solid #ddd;
@@ -195,6 +187,7 @@ ul {
 li {
   margin-bottom: 5px;
 }
+/* End of Card Design */
 
 /* Contact Form Modern Design */
 form {
@@ -251,13 +244,4 @@ button {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
-/* hero section */
-.hero {
-  background: url("/images/car-service.jpg") no-repeat center center/cover;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* End of hero section */
+/* end of Contact Form Modern Design */
