@@ -10,17 +10,16 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: cadetblue;
   padding: 20px 50px;
-  flex-wrap: wrap; /* permite mutarea meniului pe linia următoare */
 }
 
 .logo a {
+  display: flex;
+  gap: 10px;
   font-size: 30px;
+  font-decoration: none;
   font-weight: bold;
-  text-decoration: none;
-  color: white;
 }
 
 nav a {
@@ -30,41 +29,17 @@ nav a {
 
 .menu {
   display: flex;
-  gap: 20px;
-  transition: all 0.3s ease-in-out;
+  gap: 10px;
 }
 
 .menu a {
   text-decoration: none;
   color: white;
   font-size: 1.1rem;
+  position: relative;
   padding: 5px 0;
   transition: color 0.3s ease;
 }
-
-/* Responsive 
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .menu {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 15px;
-      }
-
-      .menu a {
-        padding: 10px;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 5px;
-      }
-
-      .menu a:hover {
-        background: rgba(255, 255, 255, 0.2);
-      }
 
 /* Hover underline effect */
 .menu a::after {
