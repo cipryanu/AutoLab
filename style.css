@@ -3,15 +3,14 @@
   padding: 0;
 }
 
+/*responsive design*/
 /*widescreen*/
 
 @media screen {
   min-width: 1201px;
 }
-body {
-  background-color: white;
-}
-#widescreen > h1 {
+
+menu {
   display: block;
 }
 
@@ -20,10 +19,9 @@ body {
   min-width: 769px;
   max-width: 1200px;
 }
-body {
-  background-color: white;
-}
-#laptop > h1 {
+
+nav,
+menu {
   display: block;
 }
 
@@ -32,6 +30,33 @@ body {
   min-width: 481px;
   max-width: 768px;
 }
+
+nav,
+menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cadetblue;
+  padding: 20px 50px;
+  flex-wrap: wrap; /* permite mutarea meniului pe linia următoare */
+}
+
+/*mobile*/
+@media screen {
+  max-width: 375px;
+}
+
+nav,
+menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cadetblue;
+  padding: 20px 50px;
+  flex-wrap: wrap; /* permite mutarea meniului pe linia următoare */
+}
+
+/*end of responsive design*/
 
 body {
   font-family: "roboto", sans-serif;
