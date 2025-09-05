@@ -119,9 +119,19 @@ h1 {
   align-items: center;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  opacity: -1;
+
+  animation: fadeInHero 3s ease forwards;
 }
 .hero h1 {
   font-size: 3rem;
+}
+
+@keyframes fadeInHero {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* End of hero section */
 
@@ -153,6 +163,13 @@ h1 {
 }
 
 /* Card Design */
+.cards-container {
+  display: flex;
+  gap: 20px; /* spațiu între carduri */
+  justify-content: space-between; /* sau center, după preferință */
+  flex-wrap: wrap; /* ca să treacă pe rândul următor pe ecrane mici */
+}
+
 .card {
   background: #f9f9f9;
   border: 1px solid #ddd;
@@ -161,7 +178,11 @@ h1 {
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(33.333% - 20px); /* trei pe rând */
+  margin: 0; /* folosim gap-ul, nu margin */
+  box-sizing: border-box;
 }
+
 .card:hover {
   background-color: lightgray;
   transform: translateY(-5px);
@@ -245,3 +266,33 @@ button {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 /* end of Contact Form Modern Design */
+
+/* --- Descriere Section: Our Services + Why Choose --- */
+.descriere {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* două coloane */
+  gap: 40px;
+  position: relative;
+  padding: 20px 0;
+}
+
+/* linia verticală dintre coloane */
+.descriere::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #ccc;
+}
+
+/* stil pentru fiecare coloană */
+.descriere .col {
+  padding: 0 20px;
+}
+
+.descriere h3 {
+  color: cadetblue;
+  margin-bottom: 10px;
+}
