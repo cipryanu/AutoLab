@@ -3,6 +3,36 @@
   padding: 0;
 }
 
+/*widescreen*/
+
+@media screen {
+  min-width: 1201px;
+}
+body {
+  background-color: white;
+}
+#widescreen > h1 {
+  display: block;
+}
+
+/*laptop*/
+@media screen {
+  min-width: 769px;
+  max-width: 1200px;
+}
+body {
+  background-color: white;
+}
+#laptop > h1 {
+  display: block;
+}
+
+/*tablet*/
+@media screen {
+  min-width: 481px;
+  max-width: 768px;
+}
+
 body {
   font-family: "roboto", sans-serif;
 }
